@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beer & Shiur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Body Styles */
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Lato', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Main Container Styles */
+        .flyer-container {
+            max-width: 500px;
+            width: 100%;
+            background-color: #3a4a6e; /* Dark blue from flyer */
+            color: #f3e5ab; /* Creamy yellow from flyer */
+            padding: 40px 20px 60px 20px;
+            text-align: center;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            /* Subtle texture to mimic the paper effect */
+            background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+        }
+
+        /* Header Section */
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 10vw, 3.5rem);
+            font-weight: 700;
+            color: #fdf5e6;
+            margin: 0;
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            white-space: nowrap; /* Ensures title stays on one line */
+        }
+
+        .gazebo-image-container {
+            margin-top: 100px; /* Adjusted margin to give title space */
+            position: relative;
+            z-index: 1;
+        }
+
+        .gazebo-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #f3e5ab;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        
+        /* Beer Mug Emojis */
+        .beer-mug {
+            font-size: 50px; /* Controls the size of the emoji */
+            position: absolute;
+            top: 30px;
+            z-index: 2;
+        }
+        .beer-mug.left {
+            left: 20px;
+        }
+        .beer-mug.right {
+            right: 20px;
+        }
+
+        /* Content Boxes */
+        .content-box {
+            background-color: rgba(243, 229, 171, 0.95); /* Semi-transparent cream */
+            color: #3a4a6e;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px auto;
+            max-width: 90%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .content-box p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .event-details {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            color: #fdf5e6;
+        }
+
+        /* Topic Section */
+        .topic-container {
+            margin-top: 25px;
+        }
+        
+        .topic-label {
+            background-color: #f3e5ab;
+            color: #3a4a6e;
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .topic-question {
+            font-size: 1.25rem;
+            font-weight: bold;
+            line-height: 1.4;
+            color: #fdf5e6;
+        }
+
+        /* Decorative Gold Arc at the bottom */
+        .gold-arc {
+            position: absolute;
+            bottom: -80px;
+            left: -25%;
+            width: 150%;
+            height: 150px;
+            background: #f3e5ab;
+            border-radius: 50%;
+            opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="flyer-container">
+        <h1 class="main-title">Beer & Shiur</h1>
+
+        <!-- Beer Mug Emojis -->
+        <span class="beer-mug left">🍺</span>
+        <span class="beer-mug right">🍺</span>
+
+        <div class="gazebo-image-container">
+            <img src="gazebo.jpg" alt="Outdoor gazebo setting for the event" class="gazebo-image">
+        </div>
+
+        <div class="content-box">
+            <p>Good times, great company, and deep connections. Join us for a new outdoor series featuring social drinks and a community Shiur with Rabbi Weissman. Let's build community together.</p>
+        </div>
+
+        <div class="event-details">
+            Shabbos, July 11th at 5pm in the Gazebo.
+        </div>
+
+        <div class="topic-container">
+            <div class="topic-label">This Week's Topic:</div>
+            <p class="topic-question">Parshat Balak and Antisemitism - Why Do They Always Try To Curse Us?</p>
+
+        </div>
+
+        <div class="gold-arc"></div>
+    </div>
+
+</body>
+</html>
+
